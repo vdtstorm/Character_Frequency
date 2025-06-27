@@ -24,4 +24,15 @@ def find_digit(txt):
     print(f"Numbers: {number_cnt}")
     print(f"Numbers: {whole_number}")
     
-find_digit("Hello.  How are you? I am 4 years old.  My favorite color is blue. Next year I will be 5.  My IP address is 128.4.0.46")
+digit_cnt,number_cnt,numbers = find_digit("Hello.  How are you? I am 4 years old.  My favorite color is blue. Next year I will be 5.  My IP address is 128.4.0.46")
+
+
+added = 0
+for i in numbers:
+    added = added + int(i)
+flo = added/number_cnt
+
+print("NUMBER ANALYSIS\n")
+print(f"Number of integers in the file:    {number_cnt}")
+print(f"Their sum:                         {added}")
+print(f"Their average:                     {round(flo,2)}")
